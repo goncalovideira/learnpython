@@ -39,7 +39,3 @@ jobs:
       - name: Install scrapy
         run: |
           pip install Scrapy
-
-      - name: Start project
-        run: |
-          scrapy startproject tutorial
