@@ -3,6 +3,6 @@ Repository for me to learn how to run python scripts from virtual machines and s
 
 ## Scrapy
 
-need to run ```scrapy startproject projectname``` on command shell with your local machine for folders to be created
+need to run `scrapy startproject projectname` on command shell with your local machine for folders to be created
 
 ## Others
