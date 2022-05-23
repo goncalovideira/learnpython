@@ -1,5 +1,7 @@
 import scrapy
 
+from ..items import JobsItem
+
 # https://docs.scrapy.org/en/latest/intro/tutorial.html
 
 # --- SPIDER ---
@@ -13,8 +15,9 @@ class LinkedIn (scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
     
     def parse(self, response):
-        page = response.url.split("/")[-2]
-        filename = f'quotes-{page}.html'
-        with open(filename, 'wb') as f:
-            f.write(response.body)
-        self.log(f'Saved file {filename}')
+        item = JobsItem()
+        jobs = response.css("a.jobTitle-link")
+        for job in jobs:
+            item['jobTitle'] = job.css("::text").get()
+            item['jobURL'] = job.css('::attr(href)').get()
+            yield item
