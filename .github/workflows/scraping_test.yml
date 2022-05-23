@@ -26,7 +26,7 @@ jobs:
           pip install Scrapy
     - name: Fetch latest data
       run: |-
-        scrapy runspider learnpython/jobs/jobs/spiders/jobs_tests.py -o jobs1.json
+        scrapy runspider https://github.com/goncalovideira/learnpython/blob/a6d2d2c2057049c2cc2bb09c40338530f36032dc/jobs/jobs/spiders/jobs_tests.py -o jobs1.json
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
