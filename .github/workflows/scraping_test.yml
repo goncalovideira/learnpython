@@ -27,4 +27,4 @@ jobs:
     - name: Fetch latest data
       run: |-
         cd jobs
-        scrapy runspider jobs/spiders/jobs_tests.py -o data/jobs1.json
+        scrapy runspider jobs/spiders/jobs_tests.py -o jobs1.json
