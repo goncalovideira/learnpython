@@ -16,8 +16,8 @@ class LinkedIn (scrapy.Spider):
     
     def parse(self, response):
         item = JobsItem()
-        jobs = response.css("a.jobTitle-link")
+        jobs = response.xpath("//td/span[contains(@class, 'jobTitle hidden-phone')]")
         for job in jobs:
-            item['jobTitle'] = job.css("::text").get()
+            item['jobTitle'] = job.css('a::text').get()
             item['jobURL'] = job.css('::attr(href)').get()
             yield item
