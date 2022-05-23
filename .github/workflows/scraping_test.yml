@@ -26,4 +26,4 @@ jobs:
           pip install Scrapy
     - name: Fetch latest data
       run: |-
-        scrapy runspider jobs/jobs/spiders/jobs_tests.py
+        scrapy runspider jobs/jobs/spiders/jobs_tests.py -o data/jobs1.txt
