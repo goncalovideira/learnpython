@@ -5,10 +5,10 @@ import scrapy
 # --- SPIDER ---
 
 class LinkedIn (scrapy.Spider): 
-    name = 'galp'
+    name = 'sonae'
 
     def start_requests(self):
-        urls = ['https://jobs.galp.com/go/Oportunidades/1335501/']
+        urls = ['https://www.sonae.pt/pt/pessoas/oportunidades-de-carreira/']
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
     
