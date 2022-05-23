@@ -21,6 +21,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Install scrapy
+      run: |
+          pip install Scrapy
     - name: Fetch latest data
       run: |-
         scrapy runspider learnpython/jobs/jobs/spiders/jobs_tests.py -o jobs1.json
