@@ -1,6 +1,6 @@
 import scrapy
 
-from ..items import JobsItem
+from jobs.items import JobsItem
 
 # https://docs.scrapy.org/en/latest/intro/tutorial.html
 
