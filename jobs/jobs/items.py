@@ -11,4 +11,5 @@ class JobsItem(scrapy.Item):
     # name = scrapy.Field()
     jobTitle = scrapy.Field()
     jobURL = scrapy.Field()
+    jobDate = scrapy.Field()
     pass
