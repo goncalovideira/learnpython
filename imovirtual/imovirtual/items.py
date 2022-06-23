@@ -7,6 +7,26 @@ import scrapy
 
 
 class ImovirtualItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    title = scrapy.Field()
+    price = scrapy.Field()
+    local = scrapy.Field()
+    location = scrapy.Field()
+    county = scrapy.Field()
+    area_net = scrapy.Field()
+    area_gross = scrapy.Field()
+    area_land = scrapy.Field()
+    type = scrapy.Field()
+    construction_year = scrapy.Field()
+    toilets = scrapy.Field()
+    energy = scrapy.Field()
+    condition = scrapy.Field()
+    others = scrapy.Field()
+    pool = scrapy.Field()
+    alarm = scrapy.Field()
+    storage = scrapy.Field()
+    central_heating = scrapy.Field()
+    air_conditioning = scrapy.Field()
+    fireplace = scrapy.Field()
+    parking = scrapy.Field()
+    garage = scrapy.Field()
+    description = scrapy.Field()

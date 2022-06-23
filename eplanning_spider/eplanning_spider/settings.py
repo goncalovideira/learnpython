@@ -1,4 +1,4 @@
-# Scrapy settings for properties project
+# Scrapy settings for eplanning_spider project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,17 +7,17 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'properties'
+BOT_NAME = 'eplanning_spider'
 
-SPIDER_MODULES = ['properties.spiders']
-NEWSPIDER_MODULE = 'properties.spiders'
+SPIDER_MODULES = ['eplanning_spider.spiders']
+NEWSPIDER_MODULE = 'eplanning_spider.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'properties (+http://www.yourdomain.com)'
+#USER_AGENT = 'eplanning_spider (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -45,13 +45,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'properties.middlewares.PropertiesSpiderMiddleware': 543,
+#    'eplanning_spider.middlewares.EplanningSpiderSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'properties.middlewares.PropertiesDownloaderMiddleware': 543,
+#    'eplanning_spider.middlewares.EplanningSpiderDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'properties.pipelines.PropertiesPipeline': 300,
+#    'eplanning_spider.pipelines.EplanningSpiderPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
